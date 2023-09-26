@@ -1,2 +1,2 @@
 # ido
-A Rust Heterogeneous Map implementation
+A Heterogeneous Map implementation written in Rust.
