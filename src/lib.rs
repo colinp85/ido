@@ -113,6 +113,26 @@ impl Ido {
         }
     }
 
+    /// Ordered iterator that will iterate the Ido in the order it was populated
+    ///
+    /// This function should only be used for debug purposes as it will be less
+    /// performant than an unordered sort.
+    /// 
+    /// # Example
+    /// 
+    /// ```
+    /// use ido::Ido;
+    /// 
+    /// let mut ido = Ido::new();
+    /// ido.set_string(&1, "value1".to_string());
+    /// ido.set_string(&2, "value2".to_string());
+    /// 
+    /// for (key, value) in ido.into_ordered_iterator() {
+    ///     match value.as_string() {
+    ///         Some(val) => println!("Key: {}, Val: {}", key, val),
+    ///         None => println!("Key: {}, Val: None", key),
+    ///     }
+    /// }
     pub fn into_ordered_iterator(&self) -> OrderedIdoIterator {
         OrderedIdoIterator { m_ido: self, m_curr: 0 }
     }
