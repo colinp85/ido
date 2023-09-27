@@ -2,6 +2,9 @@
 name = "ido"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/colinp85/ido"
+license = "MIT"
+keywords = ["heterogeneous", "map"]
 
 [lib]
 name = "ido"
